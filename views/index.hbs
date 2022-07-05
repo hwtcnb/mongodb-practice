@@ -1,0 +1,17 @@
+<div>
+<form action="/" id="form1" method="post" enctype="multipart/form-data">
+    <input id="name" name="name" type="text">
+    <label for="name">username</label><br><br>
+
+    <input id="image" name="image" type="file"><br><br>
+
+    <button form="form1" type="submit">submit</button>
+</form>
+</div>
+{{#if data}}
+<img src="data:image/{{contentType}};base64,{{data}}">
+{{/if}}
+
+{{#if miss}}
+<p>{{miss}}</p>
+{{/if}}
